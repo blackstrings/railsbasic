@@ -1,0 +1,11 @@
+<div class="well well-sm bg-info">
+	<p class="text-center">
+	Ruby on Rails &copy;<span id="todayDate"></span><br>
+	WI, USA
+	</p>
+</div>
+<script>
+$(function(){
+	document.getElementById("todayDate").innerHTML = "2015-" + new Date().getFullYear();
+});
+</script>

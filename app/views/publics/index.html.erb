@@ -1,0 +1,23 @@
+<div class="row bg-primary">
+	<div class="col-md-12">
+		<h1>Home Static Page</h1>
+	</div>
+</div>
+
+<br>
+
+<div class="row">
+	<div class="col-md-12">
+		
+		<ul>
+		<!-- (nameOfButton, { rubyHash }, class, id, html doms) -->
+		<%= link_to('Create New User', {:controller => 'users', :action => 'new'}, :class => 'btn btn-primary', :id => 'link1' ) %>
+
+		<%= link_to('User Index', {:controller => 'users', :action => 'index'}, :class => 'btn btn-primary', :id => 'link2' ) %>
+
+		<%= link_to('redirect back to index', {:action => 'other'}, :class => 'btn btn-primary', :id => 'link3' ) %>
+
+		</ul>
+	
+	</div>
+</div>

@@ -1,0 +1,62 @@
+	<div class="row bg-primary">
+		<div class="col-md-12">
+			<h1>Create a new user</h1>
+		</div>
+	</div>
+
+	<div class="row" style="padding:15px;">
+		<div class="col-md-12">
+
+			<%= form_for @user,  class: "form-horizontal" do |form| %>
+
+
+				<div class="form-group">
+					<div class="control-label col-xs-2 text-right">
+						
+					</div>
+					<div class="col-xs-10">
+						<%= form.file_field :avatar %>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="control-label col-xs-2 text-right">
+						<%= form.label :first_name, class: 'control-label' %>
+					</div>
+					<div class="col-xs-10">
+						<%= form.text_field :first_name %>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="control-label col-xs-2 text-right">
+						<%= form.label :last_name, class: 'control-label' %>
+					</div>
+					<div class="col-xs-10">
+						<%= form.text_field :last_name %>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="control-label col-xs-2 text-right">
+						<%= form.label :email, class: 'control-label' %>
+					</div>
+					<div class="col-xs-10">
+						<%= form.text_field :email %>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="control-label col-xs-2 text-right">
+					</div>
+					<div class="col-xs-10">
+						<%= form.submit class: "btn btn-primary" %>
+					</div>
+				</div>
+
+			<% end %>
+	
+		</div>
+	</div>
+
+

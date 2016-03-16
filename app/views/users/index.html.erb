@@ -1,0 +1,46 @@
+<%# users index - this page shows all users in a list%>
+
+
+	<div class="row">
+		<div class="col-md-12">
+			<h1>User Index Page</h1>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<table class="table">
+				
+				<!-- labels -->
+				<tr>
+					<td>Id</td>
+					<td>image</td>
+					<td>first</td>
+					<td>last</td>
+					<td>email</td>
+					<td>actions</td>
+				</tr>
+
+				<!-- dynamic user data loaded here -->
+				<% @users.each do |user| %>
+				
+				<tr>
+					<td><%= user.id %></td>
+					<td><%= image_tag user.avatar.url(:thumb, timestamp:false), class: "img-circle new-missing-img img-responsive" %>
+					<td><%= user.first_name %></td>
+					<td><%= user.last_name %></td>
+					<td><%= user.email %></td>
+					<td>
+					<%= link_to("Show", '#', :class => 'action show') %>
+					<%= link_to("Edit", '#', :class => 'action edit') %>
+					<%= link_to("Delete", '#', :class => 'action delete') %>
+
+					</td>
+				</tr>
+
+				<% end %>
+
+			</table>
+		</div>
+	</div>
+
